@@ -1,0 +1,22 @@
+@import "tailwindcss";
+body{
+    font-family: "Inter";
+}
+.btn{
+    background-color: yellow;
+    width: 60px;
+    border-radius: 47%;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+    color: rgba(18, 18, 18, 0.872);
+    font-weight: 600;
+}
+.ff{
+    font-family: "Black Ops One";
+}
+::-webkit-scrollbar {
+    display: none;         
+}
