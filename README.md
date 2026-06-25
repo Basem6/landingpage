@@ -1,5 +1,5 @@
 # Overview
-![home](/batman/src/assets/screenshots/Screenshot%202026-06-25%20175758.png)
+![Home](./src/assets/screenshots/Screenshot%202026-06-25%20175758.png)
 # Landing Page
 A modern landing page built with React, Vite, Three.js, and GSAP.
 
