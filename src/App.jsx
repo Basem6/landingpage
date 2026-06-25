@@ -51,7 +51,7 @@ export default function App() {
       scene.add(diLight);
       const loader = new GLTFLoader();
 
-      loader.load("../public/assets/protein_jar.glb", (gltf) => {
+      loader.load("/assets/protein_jar.glb", (gltf) => {
           modal = gltf.scene;
           modal.add(ambient)
           scene.add(modal);
