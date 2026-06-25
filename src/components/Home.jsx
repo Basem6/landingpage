@@ -58,14 +58,14 @@ export function Home(){
     }
     },[])
     return(
-        <div className="h-full">
-            <div id="section">
-                <div className="head flex flex-col justify-center items-center text-yellow-300  pt-22 border-b-yellow-300 border-b-6 border-dotted ">
+        <div className="h-full max-w-full">
+            <div id="section" className="max-w-full">
+                <div className="head flex flex-col justify-center items-center text-yellow-300 pt-5   md:pt-22 border-b-yellow-300 border-b-6 border-dotted ">
                     <p className="font-bold">Free Rosted become this</p>
-                    <div className="ff  text-[210px] relative   leading-none">BOLD FLAVOR</div>
+                    <div className="ff text-[79px]  md:text-[210px] relative   leading-none">BOLD FLAVOR</div>
                 </div>
                 <div className="main  min-h-100 flex justify-center overflow-hidden relative top-2">
-                    <div className="text-8xl ff  text-yellow-300 pt-3 z-10 ">TIKKA MASALA</div>
+                    <div className="text-4xl md:text-8xl ff  text-yellow-300 pt-3 z-10 ">TIKKA MASALA</div>
                     <div className="absolute left-0 bottom-7 px-10">
                         <p className="max-w-70 text-sm text-yellow-300 pb-4">Lore. Inventorer vi, nesciunt voluptas sunt voluptatibus odit esse consequuntur beatae nisi. Soluta, num</p>
                         <div className="whitespace-nowrap bg-yellow-300 w-fit rounded-full py-2 px-5 text-xs font-bold">
@@ -75,12 +75,12 @@ export function Home(){
                 </div>
                 <div className="w-full min-h-175">
                 </div>
-                <div className="w-full min-h-225 pl-9" ref={sectiontext1}>
-                    <div className="text-[150px] relative leading-none text-yellow-300 max-w-3/4 ff" ref={text1}>A NEW ANGLE OF FLAVOR</div>
+                <div className="w-full min-h-225 px-9" ref={sectiontext1}>
+                    <div className=" text-[79px]  md:text-[150px] relative leading-none text-yellow-300 max-w-3/4 ff" ref={text1}>A NEW ANGLE OF FLAVOR</div>
                     <p className="max-w-70 text-sm text-yellow-200 pb-4 mt-32">Lore. Inventorer vi, nesciunt voluptas sunt voluptatibus odit esse consequuntur beatae nisi. Soluta, num</p>
                 </div>
-                <div className="w-full min-h-285 pl-9 mt-30 flex flex-col items-center relative" ref={sectiontext2}>
-                    <div className="ff  text-[150px] relative leading-none text-yellow-300 min-w-full text-center" ref={text2}>UNWRAP THE ADVENTURE</div>
+                <div className="w-full min-h-285 px-9 mt-30 flex flex-col items-center relative" ref={sectiontext2}>
+                    <div className="ff  text-[55px]  md:text-[150px] relative leading-none text-yellow-300 min-w-full text-center" ref={text2}>UNWRAP THE ADVENTURE</div>
                     <div className="flex gap-5 mt-60">
                         <div className="bg-transparent border border-gray-200/20 size-10 flex justify-center items-center rounded-full">
                             <i className="fa-solid fa-boxes-stacked text-gray-300"></i>
@@ -100,8 +100,8 @@ export function Home(){
                         </div>
                     </div>
                 </div>
-                <div className="w-full min-h-225 pl-9 mt-60" ref={sectiontext3}>
-                    <div className="ff  text-[110px] relative leading-none text-yellow-300 max-w-2/4" ref={text3}>A NEW PERSOECTIVE OF TASTE</div>
+                <div className="w-full min-h-225 px-9 mt-60" ref={sectiontext3}>
+                    <div className="ff text-[40px]  md:text-[110px] relative leading-none text-yellow-300 max-w-2/4" ref={text3}>A NEW PERSOECTIVE OF TASTE</div>
                 </div>
             </div>
         </div>

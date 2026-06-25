@@ -19,6 +19,8 @@ export default function App() {
   const mountRef = useRef(null);
   const parente = useRef(null);
   useGSAP(() => {
+    const mm = gsap.matchMedia();
+    mm.add("(min-width: 769px)", () => {
       let modal;
       const scene = new THREE.Scene();
 
@@ -93,6 +95,7 @@ export default function App() {
       return () => {
       mountRef.current.removeChild(renderer.domElement);
       };
+    })
   }, []);
   useGSAP(()=>{
       gsap.to(parente.current,{
@@ -128,7 +131,7 @@ export default function App() {
   return (
     <div className="relative min-w-full min-h-[2000px]">
         <Nav></Nav>
-        <div className="h-screen min-w-full z-10 top-27  fixed" ref={parente}>
+        <div className="h-screen min-w-full z-10 top-27  fixed hidden md:block" ref={parente}>
               <div ref={mountRef} className="min-w-full min-h-full  transition-all duration-500" />
         </div>
         <div className="fixed right-0 bottom-7 px-10 z-50" ref={fixedbtn}>

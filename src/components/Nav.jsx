@@ -18,7 +18,7 @@ export function Nav(){
         })
     },[])
     return(
-        <div ref={nav} className="min-w-full min-h-20 flex justify-between py-1.5  border-b-6 border-dotted border-b-yellow-300/90 px-5 top-0 fixed bg-transparent z-50">
+        <div ref={nav} className="hidden md:flex min-w-full min-h-20  justify-between py-1.5  border-b-6 border-dotted border-b-yellow-300/90 px-5 top-0 fixed bg-transparent z-50">
             <div className="left flex gap-1 min-w-1/3 max-w-1/3">
                 <div className="btn">home</div>
                 <div className="btn">about</div>

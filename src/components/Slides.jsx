@@ -73,7 +73,7 @@ export function Slides(){
         }
     },[])
     return(
-        <div className="w-full min-h-screen max-h-fit bg-amber-200/80 py-12 pb-20  px-8" ref={sectionslide}>
+        <div className="w-full min-h-screen max-h-fit bg-amber-200/80 py-12 pb-20  px-8 hidden md:block" ref={sectionslide}>
             <h1 className="text-yellow-950/90 font-[Inter] text-6xl font-bold  leading-15 " ref={textslide}>TRASITION<br></br> &  CREATION</h1>
             <p className="max-w-70 text-sm text-yellow-900 leading-4 mt-4">Lo voluptatiewk;g4 sse consequuntur beatae nisi. Soluta, num sequuntur beatae nisi. Soluta</p>
             <div className="images  min-h-[2000px] relative">

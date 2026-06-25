@@ -30,7 +30,7 @@ export function Shop(){
     },[])
     return (
         <div id="shop" ref={sectionshop} className="border-3 border-red-400">
-            <div className="min-w-full min-h-screen bg-pink-500 z-40 relative">
+            <div className="min-w-full min-h-screen bg-pink-500 z-40 relative hidden md:block">
                 <div className="pt-75 pb-5 px-5">
                     <h1 className="text-amber-200 font-[Inter] text-8xl font-bold leading-25 max-w-1/2">UN LOCK THE MAGIC INSIDE THE JAR</h1>
                     <button className="w-fit px-5 rounded-full bg-yellow-200 text-gray-900/90 py-2.5 text-sm mt-5 ">Read more</button>
@@ -44,8 +44,8 @@ export function Shop(){
                                 <h1 className="text-yellow-200/80 font-[Inter] text-7xl font-bold  py-12" ref={text5}>COOKING</h1>
                                 <button className="rounded-full py-2 px-4 text-xs text-black/90 bg-yellow-200/80">TASTE DELECIOUS</button>
                             </div>
-                            <div className="cards min-w-full min-h-150 flex justify-between items-center p-9">
-                                    <div className=" bg-amber-200 w-119 h-140 flex flex-col gap-1 p-2">
+                            <div className="cards min-w-full min-h-150 flex justify-between items-center md:p-9 p-3 flex-wrap gap-1.5">
+                                    <div className=" bg-amber-200 md:w-119 md:h-140 flex flex-col gap-1 p-2">
                                         <div className="h-3/5 min-w-full overflow-hidden">
                                             <img src={img1} alt="img"  loading="lazy" className="w-full h-full object-cover" />
                                         </div>
@@ -58,7 +58,7 @@ export function Shop(){
                                             <p className="py-7 text-xs max-w-2/3 opacity-80">Lorem ipsum etuelit. Eligendi ad, possimus iusto aliquam nam illum.</p>
                                         </div>
                                     </div>
-                                    <div className=" bg-amber-200 w-119 h-140 flex flex-col gap-1 p-2">
+                                    <div className=" bg-amber-200 md:w-119 md:h-140 flex flex-col gap-1 p-2">
                                         <div className="h-3/5 min-w-full overflow-hidden">
                                             <img src={img1} loading="lazy" alt="image.png" className="w-full h-full object-cover" />
                                         </div>
@@ -71,7 +71,7 @@ export function Shop(){
                                             <p className="py-7 text-xs max-w-2/3 opacity-80">Lorem ipsum etuelit. Eligendi ad, possimus iusto aliquam nam illum.</p>
                                         </div>
                                     </div>
-                                    <div className=" bg-amber-200 w-119 h-140 flex flex-col gap-1 p-2">
+                                    <div className=" bg-amber-200 md:w-119 md:h-140 flex flex-col gap-1 p-2">
                                         <div className="h-3/5 min-w-full overflow-hidden">
                                             <img src={img1} alt="img" loading="lazy" className="w-full h-full object-cover" />
                                         </div>
@@ -87,9 +87,9 @@ export function Shop(){
                             </div>
             </div>
             <div className="w-full min-h-200 bg-yellow-200/80  z-50 grid grid-cols-12 ">
-                        <div className="bg-transparent  col-span-8 relative flex flex-col justify-between">
+                        <div className="bg-transparent col-span-12  md:col-span-8 relative flex flex-col justify-between">
                             <div className="min-w-full">
-                            <h1 className="text-yellow-950 font-[Inter] text-5xl font-bold leading-15 p-8 pr-80">FLAVOR-PACKED UPADATES STRAIGHT INTO YOUR INBOX + 10% OFF YOUR FIRST JAR.</h1>
+                            <h1 className="text-yellow-950 font-[Inter] text-4xl md:text-5xl font-bold leading-13 md:leading-15 p-8 pr-0 md:pr-80">FLAVOR-PACKED UPADATES STRAIGHT INTO YOUR INBOX + 10% OFF YOUR FIRST JAR.</h1>
                             </div>
                             <div className="bg-yellow-950 border border-gray-200/20 size-14 flex justify-center items-center rounded-full absolute right-14 rotate-10 top-1/2">
                                     <i className="fa-solid fa-boxes-stacked text-gray-300"></i>
@@ -98,7 +98,7 @@ export function Shop(){
                                 <button className="w-full rounded-full bg-amber-950/90 text-gray-200 py-2.5 text-sm ">Read more</button>
                             </div>
                         </div>
-                        <div className="col-span-4 bg-pink-500 z-40 relative">
+                        <div className="col-span-4 bg-pink-500 z-40 relative hidden md:block">
                             <div className="absolute min-w-full h-full left-0 top-0 z-30">
                                 <img src={img} loading="lazy" alt="jar" className="min-w-full min-h-full bg-repeat-y max-w-full max-h-full object-cover brightness-50 opacity-10 "/>
                             </div>

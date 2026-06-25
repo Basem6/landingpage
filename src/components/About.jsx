@@ -84,12 +84,12 @@ export function About(){
                             </div>
                         </div>
                 </div>
-                <h1 className="text-yellow-100 font-[Inter] text-4xl   leading-10 p-8 mt-58" ref={textfillers}>NO FILLERS <br></br> NO SHORTCUTS</h1>
-                <div className="absolute left-0 bottom-0">
-                    <h1 className="text-yellow-100 font-[Inter]  font-extrabold text-7xl   leading-16 p-8 mt-58" ref={textfillers2}><span className="relative left-2">JUST BOLD TASTE</span> <br></br> IN EVERY JAR</h1>
+                <h1 className="text-yellow-100 font-[Inter] text-2xl md:text-4xl leading-7   md:leading-10 p-8 mt-58" ref={textfillers}>NO FILLERS <br></br> NO SHORTCUTS</h1>
+                <div className="absolute left-2 bottom-2 w-full">
+                    <h1 className="text-yellow-100 font-[Inter]  font-extrabold text-4xl md:text-7xl leading-10   md:leading-16  mt-58 min-w-full" ref={textfillers2}><span className="relative left-2">JUST BOLD TASTE</span> <br></br> IN EVERY JAR</h1>
                 </div>
             </div>
-            <div className="col-span-4 bg-pink-500 z-40 relative">
+            <div className="col-span-4 bg-pink-500 z-40 relative hidden md:block">
                 <div className="absolute min-w-full h-full left-0 top-0 z-30">
                     <img src={img} alt="" className="min-w-full min-h-full bg-repeat-y max-w-full max-h-full object-cover brightness-50 opacity-10 "/>
                 </div>
