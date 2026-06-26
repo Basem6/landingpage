@@ -53,9 +53,9 @@ export function About(){
     },[])
     return(
         <div className="w-full min-h-400 bg-pink-950 z-50  grid grid-cols-12"  ref={sectionabout}>
-            <div className="bg-transparent  col-span-8 relative">
+            <div className="bg-transparent col-span-12  md:col-span-8 relative">
                 <div className="min-w-full border-b-yellow-100 border-b-5 border-dotted">
-                    <h1 className="text-yellow-100 font-[Inter] text-6xl font-bold max-w-16 leading-15 p-8">WHAT'S INSIDE</h1>
+                    <h1 className="text-yellow-100 font-[Inter] text-4xl md:text-6xl font-bold md:max-w-16 leading-15 p-8">WHAT'S INSIDE</h1>
                 </div>
                 <p className="max-w-100 text-sm text-yellow-100/80 p-8 mt-4  text-start">Lore. Inventorers sunt voluptatibus odit esse consequuntur beatae nisi. Soluta, num sequuntur beatae nisi. Soluta</p>
                 <div className="flex gap-8 mt-40 flex-col p-8">
@@ -84,9 +84,9 @@ export function About(){
                             </div>
                         </div>
                 </div>
-                <h1 className="text-yellow-100 font-[Inter] text-2xl md:text-4xl leading-7   md:leading-10 p-8 mt-58" ref={textfillers}>NO FILLERS <br></br> NO SHORTCUTS</h1>
+                <h1 className="text-yellow-100 font-[Inter] text-2xl md:text-4xl leading-7   md:leading-10 p-8 mt-28 md:mt-58" ref={textfillers}>NO FILLERS <br></br> NO SHORTCUTS</h1>
                 <div className="absolute left-2 bottom-2 w-full">
-                    <h1 className="text-yellow-100 font-[Inter]  font-extrabold text-4xl md:text-7xl leading-10   md:leading-16  mt-58 min-w-full" ref={textfillers2}><span className="relative left-2">JUST BOLD TASTE</span> <br></br> IN EVERY JAR</h1>
+                    <h1 className="text-yellow-100 font-[Inter]  font-extrabold text-4xl md:text-7xl leading-10   md:leading-16  min-w-full" ref={textfillers2}><span className="relative left-2">JUST BOLD TASTE</span> <br></br> IN EVERY JAR</h1>
                 </div>
             </div>
             <div className="col-span-4 bg-pink-500 z-40 relative hidden md:block">

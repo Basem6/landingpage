@@ -19,9 +19,9 @@ export default function App() {
   const mountRef = useRef(null);
   const parente = useRef(null);
   useGSAP(() => {
-    const mm = gsap.matchMedia();
-    mm.add("(min-width: 769px)", () => {
       let modal;
+      const mm = gsap.matchMedia();
+      mm.add("(min-width: 768px)", () => {
       const scene = new THREE.Scene();
 
       const camera = new THREE.PerspectiveCamera(
@@ -58,9 +58,10 @@ export default function App() {
           modal.add(ambient)
           scene.add(modal);
       });
-      // Animation loop
+       // Animation loop
       const animate = () => {
       requestAnimationFrame(animate);
+      mm.add("(min-width: 768px)", () => {
       gsap.to(parente.current,{
         scrollTrigger:{
           trigger:"#section",
@@ -71,14 +72,15 @@ export default function App() {
         scale:0.8,
         duration:1,
       })
-      gsap.to(parente.current,{
+      })
+        gsap.to(parente.current,{
         scrollTrigger:{
           trigger:"#section",
           start:"top cneter",
           toggleActions:"play reverse play reverse"
         },
         y:-50,
-        scale:0.8,
+        scale:0.5,
         duration:1,
       })
       window.addEventListener("scroll", () => {
@@ -95,7 +97,72 @@ export default function App() {
       return () => {
       mountRef.current.removeChild(renderer.domElement);
       };
-    })
+      })
+      mm.add("(max-width: 768px)", () => {
+      const scene = new THREE.Scene();
+
+      const camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      100
+      );
+      
+      camera.position.set(0, 0, 5);
+      const renderer = new THREE.WebGLRenderer({   antialias: true,
+      alpha: true });
+      renderer.setSize(
+      mountRef.current.clientWidth,
+      mountRef.current.clientHeight
+      );
+      mountRef.current.appendChild(renderer.domElement);
+
+      // Lights
+      const ambient = new THREE.AmbientLight(0xffffff, 2.4);
+      ambient.position.set(5, 10, 7);
+      scene.add(ambient);
+
+      const dirLight = new THREE.DirectionalLight(0xffffff, 2);
+      dirLight.position.set(5, 10, 7);
+      scene.add(dirLight);
+      const diLight = new THREE.DirectionalLight(0xffffff, 1);
+      diLight.position.set(10, 0, 5);
+      scene.add(diLight);
+      const loader = new GLTFLoader();
+
+      loader.load("/assets/protein_jar.glb", (gltf) => {
+          modal = gltf.scene;
+          modal.add(ambient)
+          scene.add(modal);
+      });
+       // Animation loop
+      const animate = () => {
+      requestAnimationFrame(animate);
+        gsap.to(parente.current,{
+        scrollTrigger:{
+          trigger:"#section",
+          start:"top cneter",
+          toggleActions:"play reverse play reverse"
+        },
+        y:-30,
+        scale:0.7,
+        duration:1,
+      })
+      window.addEventListener("scroll", () => {
+      const s = window.scrollY;
+      if(modal){
+      modal.rotation.y = s *- 0.0002;
+      modal.rotation.z = s * -0.0005;
+      modal.rotation.x = s * 0.00001;
+      }
+    });
+      renderer.render(scene, camera);
+      };
+      animate();
+      return () => {
+      mountRef.current.removeChild(renderer.domElement);
+      };
+      })
   }, []);
   useGSAP(()=>{
       gsap.to(parente.current,{
@@ -131,7 +198,7 @@ export default function App() {
   return (
     <div className="relative min-w-full min-h-[2000px]">
         <Nav></Nav>
-        <div className="h-screen min-w-full z-10 top-27  fixed hidden md:block" ref={parente}>
+        <div className="h-screen min-w-full z-50 md:top-27 top-8 scale-100 md:scale-90   fixed " ref={parente}>
               <div ref={mountRef} className="min-w-full min-h-full  transition-all duration-500" />
         </div>
         <div className="fixed right-0 bottom-7 px-10 z-50" ref={fixedbtn}>

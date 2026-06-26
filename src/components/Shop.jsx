@@ -41,7 +41,7 @@ export function Shop(){
             </div>
             <div className="min-w-full min-h-screen bg-yellow-900 z-40 relative flex flex-col items-center ">
                             <div className="flex flex-col items-center pb-4">
-                                <h1 className="text-yellow-200/80 font-[Inter] text-7xl font-bold  py-12" ref={text5}>COOKING</h1>
+                                <h1 className="text-yellow-200/80 font-[Inter] md:text-7xl text-6xl font-bold  py-12" ref={text5}>COOKING</h1>
                                 <button className="rounded-full py-2 px-4 text-xs text-black/90 bg-yellow-200/80">TASTE DELECIOUS</button>
                             </div>
                             <div className="cards min-w-full min-h-150 flex justify-between items-center md:p-9 p-3 flex-wrap gap-1.5">
